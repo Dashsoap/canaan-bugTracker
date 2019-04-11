@@ -1,18 +1,14 @@
 <template>
   <div id="app">
     <top-menu></top-menu>
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>|
-      <router-link to="/issues">Issues</router-link>
-    </div>-->
-    <router-view/>
+    <div class="container">
+      <router-view/>
+    </div>
   </div>
 </template>
 <script>
 import TopMenu from "@/components/TopMenu.vue";
 export default {
-  name: "App",
   components: {
     TopMenu
   }
@@ -35,6 +31,9 @@ export default {
     &.router-link-exact-active {
       color: #42b983;
     }
+  }
+  .container{
+    padding-top:200px
   }
 }
 </style>
