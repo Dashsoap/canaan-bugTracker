@@ -1,16 +1,27 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <top-menu></top-menu>
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+      <router-link to="/about">About</router-link>|
+      <router-link to="/issues">Issues</router-link>
+    </div>-->
     <router-view/>
   </div>
 </template>
+<script>
+import TopMenu from "@/components/TopMenu.vue";
+export default {
+  name: "App",
+  components: {
+    TopMenu
+  }
+};
+</script>
 
 <style lang="less">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -28,10 +39,8 @@
 }
 </style>
 <script>
-import Antd from 'ant-design-vue'
+import Antd from "ant-design-vue";
 
-export default {
-  
-}
+export default {};
 </script>
 
