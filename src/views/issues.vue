@@ -10,7 +10,7 @@ const data = [
     owner: "John Brown",
     status: "Unfixed",
     age: 32,
-    tag:"normal",
+    tag: "normal",
     summary: "New York No. 1 Lake Park"
   },
   {
@@ -19,7 +19,7 @@ const data = [
     status: "Untrigger",
     owner: "Jim Green",
     age: 42,
-    tag:"normal",
+    tag: "normal",
 
     summary: "London No. 1 Lake Park"
   },
@@ -29,7 +29,7 @@ const data = [
     status: "Fixed",
     owner: "Joe Black",
     age: 32,
-    tag:"normal",
+    tag: "normal",
 
     summary: "Sidney No. 1 Lake Park"
   },
@@ -39,7 +39,7 @@ const data = [
     status: "Fixed",
     owner: "Jim Red",
     age: 32,
-    tag:"Emergency",
+    tag: "Emergency",
     summary: "London No. 2 Lake Park"
   }
 ];
@@ -103,7 +103,7 @@ export default {
           sorter: (a, b) => a.status.length - b.status.length,
           sortOrder: sortedInfo.columnKey === "status" && sortedInfo.order
         },
-       {
+        {
           title: "Tag",
           dataIndex: "tag",
           key: "tag",
