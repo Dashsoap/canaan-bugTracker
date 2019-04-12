@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <img src="../assets/Canaan.png">
+    <img src="../assets/Canaan.png" @click="homepoint()">
     <h1>Canaan Bug</h1>
     <a-dropdown :trigger="['click']" class="dropdown">
       <a class="ant-dropdown-link" href="#">
@@ -20,7 +20,7 @@
         </a-menu-item>
       </a-menu>
     </a-dropdown>
-    <a-button type="primary">提交新的 issues</a-button>
+    <a-button type="primary" @click="createIssue()">提交新的 issues</a-button>
     <a-input-group compact class="myinput">
       <a-select defaultValue="Option1">
         <a-select-option value="Option1">kendryte</a-select-option>
@@ -59,7 +59,15 @@ export default {
     }
   },
   mounted:{
-  }
+  },
+  methods: {
+    createIssue() {
+      this.$router.push('home')
+    },
+    homepoint(){
+      this.$router.push('issues')
+    }
+  },
 };
 </script>
 
