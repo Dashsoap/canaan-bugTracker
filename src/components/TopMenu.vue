@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header" v-if="isVisible">
     <img src="../assets/Canaan.png" @click="homepoint()">
     <h1>Canaan Bug</h1>
     <a-dropdown :trigger="['click']" class="dropdown">
@@ -31,21 +31,20 @@
     <div class="user">
       <a-button type="primary" v-if="!user.name">login</a-button>
       <a-dropdown :trigger="['click']" class="dropdown" v-else>
-      <a class="ant-dropdown-link" href="#">
-        {{user.name}}
-        <a-icon type="down"/>
-      </a>
-      <a-menu slot="overlay">
-        <a-menu-item key="0">
-          <div>个人中心</div>
-        </a-menu-item>
+        <a class="ant-dropdown-link" href="#">
+          {{user.name}}
+          <a-icon type="down"/>
+        </a>
+        <a-menu slot="overlay">
+          <a-menu-item key="0">
+            <div>个人中心</div>
+          </a-menu-item>
 
-        <a-menu-item key="1">
-          <div>注销</div>
-        </a-menu-item>
-
-      </a-menu>
-    </a-dropdown>
+          <a-menu-item key="1">
+            <div>注销</div>
+          </a-menu-item>
+        </a-menu>
+      </a-dropdown>
     </div>
   </div>
 </template>
@@ -55,19 +54,26 @@ export default {
   name: "TopMenu",
   data() {
     return {
-      user: {name:"123",}
-    }
+      user: { name: "123" }
+    };
   },
-  mounted:{
-  },
+  mounted: {},
   methods: {
     createIssue() {
-      this.$router.push('home')
+      this.$router.push("about");
     },
-    homepoint(){
-      this.$router.push('issues')
+    homepoint() {
+      this.$router.push("issues");
     }
   },
+  computed: {
+    isVisible() {
+      const nameList = [
+        "about",
+      ];
+      return !nameList.includes(this.$route.name);
+    }
+  }
 };
 </script>
 
