@@ -10,34 +10,37 @@ const data = [
     owner: "John Brown",
     status: "Unfixed",
     age: 32,
-    address: "New York No. 1 Lake Park"
+    tag:"normal",
+    summary: "New York No. 1 Lake Park"
   },
   {
     key: "2",
     title: "i have a bug to baogao2",
-    status: "fixed",
-
+    status: "Untrigger",
     owner: "Jim Green",
     age: 42,
-    address: "London No. 1 Lake Park"
+    tag:"normal",
+
+    summary: "London No. 1 Lake Park"
   },
   {
     key: "3",
     title: "i have a bug to baogao3",
-    status: "fixed",
-
+    status: "Fixed",
     owner: "Joe Black",
     age: 32,
-    address: "Sidney No. 1 Lake Park"
+    tag:"normal",
+
+    summary: "Sidney No. 1 Lake Park"
   },
   {
     key: "4",
     title: "i have a bug to baogao",
-    status: "fixed",
-
+    status: "Fixed",
     owner: "Jim Red",
     age: 32,
-    address: "London No. 2 Lake Park"
+    tag:"Emergency",
+    summary: "London No. 2 Lake Park"
   }
 ];
 export default {
@@ -62,6 +65,13 @@ export default {
           filteredValue: filteredInfo.key || null,
           sorter: (a, b) => a.key - b.key,
           sortOrder: sortedInfo.columnKey === "key" && sortedInfo.order
+        },
+        {
+          title: "Stars",
+          dataIndex: "age",
+          key: "age",
+          sorter: (a, b) => a.age - b.age,
+          sortOrder: sortedInfo.columnKey === "age" && sortedInfo.order
         },
         {
           title: "Owner",
@@ -93,25 +103,25 @@ export default {
           sorter: (a, b) => a.status.length - b.status.length,
           sortOrder: sortedInfo.columnKey === "status" && sortedInfo.order
         },
-        {
-          title: "Stars",
-          dataIndex: "age",
-          key: "age",
-          sorter: (a, b) => a.age - b.age,
-          sortOrder: sortedInfo.columnKey === "age" && sortedInfo.order
+       {
+          title: "Tag",
+          dataIndex: "tag",
+          key: "tag",
+          sorter: (a, b) => a.tag.length - b.tag.length,
+          sortOrder: sortedInfo.columnKey === "tag" && sortedInfo.order
         },
         {
-          title: "Address",
-          dataIndex: "address",
-          key: "address",
-          filters: [
-            { text: "London", value: "London" },
-            { text: "New York", value: "New York" }
-          ],
-          filteredValue: filteredInfo.address || null,
-          onFilter: (value, record) => record.address.includes(value),
-          sorter: (a, b) => a.address.length - b.address.length,
-          sortOrder: sortedInfo.columnKey === "address" && sortedInfo.order
+          title: "摘要",
+          dataIndex: "summary",
+          key: "summary",
+          //   filters: [
+          //     { text: "London", value: "London" },
+          //     { text: "New York", value: "New York" }
+          //   ],
+          filteredValue: filteredInfo.summary || null,
+          //   onFilter: (value, record) => record.summary.includes(value),
+          sorter: (a, b) => a.summary.length - b.summary.length,
+          sortOrder: sortedInfo.columnKey === "summary" && sortedInfo.order
         }
       ];
       return columns;
