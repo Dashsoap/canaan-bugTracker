@@ -69,7 +69,7 @@ export default {
   computed: {
     isVisible() {
       const nameList = [
-        "about",
+        
       ];
       return !nameList.includes(this.$route.name);
     }
