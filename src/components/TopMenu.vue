@@ -79,6 +79,7 @@ export default {
 
 <style lang="less" scoped>
 .header {
+  position:sticky;
   box-sizing: border-box;
   height: 2.5rem;
   background: hsl(0, 0%, 100%);
@@ -88,7 +89,7 @@ export default {
   justify-content: flex-start;
   align-items: center;
   // z-index: 800;
-  // top: 0;
+  top: 0;
   // position: fixed;
   border-bottom: 2px solid #efefef;
   padding: 0 4px;
