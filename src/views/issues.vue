@@ -30,7 +30,6 @@ const data = [
     owner: "Joe Black",
     age: 32,
     tag: "normal",
-
     summary: "Sidney No. 1 Lake Park"
   },
   {
@@ -49,7 +48,8 @@ export default {
     return {
       data,
       filteredInfo: null,
-      sortedInfo: null
+      sortedInfo: null,
+      aa: {}
     };
   },
   computed: {
@@ -127,6 +127,9 @@ export default {
       return columns;
     }
   },
+  mounted() {
+    this.getList();
+  },
   methods: {
     handleChange(pagination, filters, sorter) {
       console.log("Various parameters", pagination, filters, sorter);
@@ -145,6 +148,14 @@ export default {
         order: "descend",
         columnKey: "age"
       };
+    },
+    getList() {
+      axios
+        .get("http://yapi.demo.qunar.com/mock/63548/getlist")
+        .then(response => {
+          this.data = response.data.data;
+          console.log(this.aa);
+        });
     }
   }
 };
