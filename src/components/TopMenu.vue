@@ -100,14 +100,17 @@ export default {
   }
   h1 {
     font-weight: 400;
+    width: 8rem;
     font-size: 1.2rem;
     margin: 0 2rem 0 0;
   }
   .dropdown {
     margin-right: 2rem;
+    width: 7rem;
   }
 
   .myinput {
+    margin-left: 2rem;
     max-width: 1000px;
   }
 }
