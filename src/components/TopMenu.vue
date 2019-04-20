@@ -8,27 +8,27 @@
         <a-icon type="down"/>
       </a>
       <a-menu slot="overlay">
-        <a-menu-item key="0">
+        <a-menu-item>
           <a href="http://www.kendryte.com/">勘智k210</a>
         </a-menu-item>
 
-        <a-menu-item key="1">
+        <a-menu-item>
           <a href="http://forum.kendryte.com/">勘智论坛</a>
         </a-menu-item>
-        <a-menu-item key="1">
+        <a-menu-item>
           <a href="https://github.com/kendryte/kendryte-ide">勘智IDE</a>
         </a-menu-item>
       </a-menu>
     </a-dropdown>
     <a-button type="primary" @click="createIssue()">提交新的 issues</a-button>
-    <a-input-group compact class="myinput">
+    <a-input-group compact class="my-input">
       <a-select defaultValue="Option1">
         <a-select-option value="Option1">kendryte</a-select-option>
         <a-select-option value="Option2">IDE</a-select-option>
       </a-select>
       <a-input style="width: 80%" defaultValue/>
     </a-input-group>
-    <div class="user">
+    <!-- <div class="user">
       <a-button type="primary" v-if="!user.name">login</a-button>
       <a-dropdown :trigger="['click']" class="dropdown" v-else>
         <a class="ant-dropdown-link" href="#">
@@ -45,7 +45,7 @@
           </a-menu-item>
         </a-menu>
       </a-dropdown>
-    </div>
+    </div>-->
   </div>
 </template>
 
@@ -57,7 +57,6 @@ export default {
       user: { name: "123" }
     };
   },
-  mounted: {},
   methods: {
     createIssue() {
       this.$router.push("about");
@@ -68,9 +67,7 @@ export default {
   },
   computed: {
     isVisible() {
-      const nameList = [
-        
-      ];
+      const nameList = [];
       return !nameList.includes(this.$route.name);
     }
   }
@@ -79,17 +76,15 @@ export default {
 
 <style lang="less" scoped>
 .header {
-  position:sticky;
-  box-sizing: border-box;
+  position: sticky;
+  top: 0;
   height: 2.5rem;
   background: hsl(0, 0%, 100%);
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   // z-index: 800;
-  top: 0;
   // position: fixed;
   border-bottom: 2px solid #efefef;
   padding: 0 4px;
@@ -100,18 +95,19 @@ export default {
   }
   h1 {
     font-weight: 400;
-    width: 8rem;
     font-size: 1.2rem;
     margin: 0 2rem 0 0;
-  }
-  .dropdown {
-    margin-right: 2rem;
-    width: 7rem;
+    white-space: nowrap;
   }
 
-  .myinput {
+  .dropdown {
+    margin-right: 2rem;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .my-input {
     margin-left: 2rem;
-    max-width: 1000px;
   }
 }
 </style>
