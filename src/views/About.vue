@@ -1,21 +1,5 @@
 <template>
   <div>
-    <!-- <div>
-      <tr class="aboutTitle">
-        <td class="canaanimg">
-          <img src="../assets/Canaan.png" @click="homepoint()">
-        </td>
-        <td @click="gotoissues()">
-          <h1>Canaan</h1>
-          <div>一个超级无敌牛逼的 IC 公司</div>
-        </td>
-      </tr>
-    </div>-->
-    <!-- ----------------------------------------------- -->
-    <!-- <div class="formContainer">
-      <div class="myForm"></div>
-      <div class="myDiv"></div>
-    </div>-->
     <div>
       <a-row>
         <a-col :span="6"></a-col>
@@ -93,58 +77,8 @@
           </div>
 
           <div class="steps-content" v-if="current===1">
-            <div class="wizbody">
-              <h4>欢迎1</h4>
-              <p>我们希望您输入最佳的问题报告，以便项目团队成员可以有效地采取行动。以下步骤将帮助您将问题发送给正确的人。</p>
-            </div>
-            <div class="wizbody">
-              <h4>确认版本号</h4>
-              <p>请确认下列信息是否正确</p>
-              <a-row style="height:32px">
-                <a-col :span="3" class="make-vertical">
-                  <div>SDK 版本号:</div>
-                </a-col>
-                <a-col :span="2">
-                  <a-select defaultValue="V0.5.3" style="width: 120px" @change="handleChange">
-                    <a-select-option value="none">无</a-select-option>
-                    <a-select-option value="0.5.3">V0.5.3</a-select-option>
-                    <a-select-option value="0.7.0">V0.7.0</a-select-option>
-                  </a-select>
-                </a-col>
-              </a-row>
-              <a-row style="height:32px">
-                <a-col :span="3" class="make-vertical">
-                  <div>HDK 版本号:</div>
-                </a-col>
-                <a-col :span="2">
-                  <a-select defaultValue="无" style="width: 120px" @change="handleChange">
-                    <a-select-option value="none">无</a-select-option>
-                    <a-select-option value="0.1.0">V0.1.0</a-select-option>
-                    <a-select-option value="0.2.0">V0.2.0</a-select-option>
-                  </a-select>
-                </a-col>
-              </a-row>
-              <a-row style="height:32px">
-                <a-col :span="3" class="make-vertical">
-                  <div>ToolChain:</div>
-                </a-col>
-                <a-col :span="2">
-                  <a-select
-                    defaultValue="Kendryte OpenOCD for Ubuntu x86_64(V 0.1.3)"
-                    style="width: 120px"
-                    @change="handleChange"
-                  >
-                    <a-select-option value="none">无</a-select-option>
-                    <a-select-option value="0.5.3">Kendryte OpenOCD for win32(V0.1.3)</a-select-option>
-                    <a-select-option value="0.7.0">Kendryte OpenOCD for Ubuntu x86_64(V 0.1.3)</a-select-option>
-                  </a-select>
-                </a-col>
-              </a-row>
-            </div>
-            <div class="wizbody">
-              <h4>帮助避免重复的问题报告</h4>
-              <a-checkbox @change="onChange">我搜索了 已经报告此问题的现有问题。</a-checkbox>
-            </div>
+            
+<home></home>
           </div>
         </a-col>
         <a-col :span="6"></a-col>
@@ -163,12 +97,16 @@
 </template>
 
 <script>
+import Home from "./Home/Home.vue";
 export default {
   name: "about",
+  components: {
+    Home
+  },
   data() {
     return {
       current: 0,
-      isread:false,
+      isread: false,
       steps: [{}, {}, {}]
     };
   },
