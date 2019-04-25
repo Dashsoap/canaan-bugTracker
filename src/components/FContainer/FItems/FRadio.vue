@@ -1,6 +1,7 @@
 <template>
   <div>
     <a-radio-group v-model="src.value">
+      <label>{{src.label}}:</label>
       <a-radio v-for="(item,i) in src.options" :key="i" :value="item.value">{{item.label}}</a-radio>
     </a-radio-group>
   </div>
