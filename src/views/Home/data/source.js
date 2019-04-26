@@ -29,17 +29,9 @@ export default
     ],
     tip: '1',
   },
-  // {
-  //   type: 'select',
-  //   label: '问题',
-  //   value: '',
-  //   options: [
-  //     {
-  //       label: '选项1',
-  //       value: 1,
-  //     },
-  //     { label: '选项2', value: 2 },
-  //     { label: '选项3', value: 3 },
-  //   ],
-  // },
+  {
+    type: 'f-textarea',
+    label: '问题',
+    value: '',
+  },
 ];

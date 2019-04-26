@@ -1,11 +1,9 @@
 <template>
   <div>
+    <label>{{src.label}}:</label>
     <a-row type="flex" justify="left">
-      <a-col span="1">
-        <label>{{src.label}}:</label>
-      </a-col>
       <a-col span="8">
-        <a-input v-model="src.value"></a-input>
+        <a-textarea v-model="src.value" class="f-textarea"></a-textarea>
       </a-col>
     </a-row>
   </div>
@@ -23,4 +21,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.f-textarea {
+}
 </style>

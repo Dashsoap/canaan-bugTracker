@@ -77,8 +77,7 @@
           </div>
 
           <div class="steps-content" v-if="current===1">
-            
-<home></home>
+            <home></home>
           </div>
         </a-col>
         <a-col :span="6"></a-col>
@@ -155,7 +154,7 @@ export default {
   border-radius: 6px;
   background-color: #fafafa;
   min-height: 400px;
-  text-align: center;
+  // text-align: center;
 }
 .content {
   display: flex;
@@ -190,7 +189,7 @@ h3 {
 }
 .make-vertical {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   height: 100%;
 }
