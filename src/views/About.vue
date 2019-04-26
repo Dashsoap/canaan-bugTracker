@@ -34,7 +34,7 @@
                   <div>SDK 版本号:</div>
                 </a-col>
                 <a-col :span="2">
-                  <a-select defaultValue="V0.5.3" style="width: 120px" @change="handleChange">
+                  <a-select defaultValue="V0.5.3" style="width: 120px">
                     <a-select-option value="none">无</a-select-option>
                     <a-select-option value="0.5.3">V0.5.3</a-select-option>
                     <a-select-option value="0.7.0">V0.7.0</a-select-option>
@@ -46,7 +46,7 @@
                   <div>HDK 版本号:</div>
                 </a-col>
                 <a-col :span="2">
-                  <a-select defaultValue="无" style="width: 120px" @change="handleChange">
+                  <a-select defaultValue="无" style="width: 120px">
                     <a-select-option value="none">无</a-select-option>
                     <a-select-option value="0.1.0">V0.1.0</a-select-option>
                     <a-select-option value="0.2.0">V0.2.0</a-select-option>
@@ -61,7 +61,6 @@
                   <a-select
                     defaultValue="Kendryte OpenOCD for Ubuntu x86_64(V 0.1.3)"
                     style="width: 120px"
-                    @change="handleChange"
                   >
                     <a-select-option value="none">无</a-select-option>
                     <a-select-option value="0.5.3">Kendryte OpenOCD for win32(V0.1.3)</a-select-option>
@@ -72,7 +71,7 @@
             </div>
             <div class="wizbody">
               <h4>帮助避免重复的问题报告</h4>
-              <a-checkbox @change="onChange">我搜索了 已经报告此问题的现有问题。</a-checkbox>
+              <a-checkbox>我搜索了 已经报告此问题的现有问题。</a-checkbox>
             </div>
           </div>
 

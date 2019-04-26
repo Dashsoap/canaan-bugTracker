@@ -1,7 +1,7 @@
 <template>
   <div>
     <a-row type="flex" justify="left">
-      <a-col span="1">
+      <a-col span="2">
         <label>{{src.label}}:</label>
       </a-col>
       <a-col span="8">
