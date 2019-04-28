@@ -60,11 +60,11 @@ export default {
       const columns = [
         {
           title: "ID",
-          dataIndex: "key",
-          key: "key",
-          filteredValue: filteredInfo.key || null,
-          sorter: (a, b) => a.key - b.key,
-          sortOrder: sortedInfo.columnKey === "key" && sortedInfo.order
+          dataIndex: "id",
+          key: "id",
+          filteredValue: filteredInfo.id || null,
+          sorter: (a, b) => a.id - b.id,
+          sortOrder: sortedInfo.columnKey === "id" && sortedInfo.order
         },
         {
           title: "Stars",
