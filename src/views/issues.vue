@@ -150,12 +150,10 @@ export default {
       };
     },
     getList() {
-      axios
-        .get("http://yapi.demo.qunar.com/mock/63548/getlist")
-        .then(response => {
-          this.data = response.data.data;
-          console.log(this.aa);
-        });
+      axios.get("/getlist").then(response => {
+        this.data = response.data.data;
+        console.log(this.aa);
+      });
     }
   }
 };
