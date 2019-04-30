@@ -1,5 +1,5 @@
 <template>
-  <a-table :columns="columns" :dataSource="data" @change="handleChange"/>
+  <a-table :columns="columns" :dataSource="data" @change="handleChange" :customRow="customRow"/>
 </template>
 
 <script>
@@ -154,6 +154,16 @@ export default {
         this.data = response.data.data;
         console.log(this.aa);
       });
+    },
+    customRow(record, index) {
+      const { $message } = this;
+      return {
+        on: {
+          click: () => {
+            this.$router.push(`detail/${record.id}`);
+          }
+        }
+      };
     }
   }
 };

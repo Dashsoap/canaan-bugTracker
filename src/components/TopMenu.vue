@@ -28,7 +28,7 @@
       </a-select>
       <a-input style="width: 80%" defaultValue/>
     </a-input-group>
-    <!-- <div class="user">
+    <div class="user">
       <a-button type="primary" v-if="!user.name">login</a-button>
       <a-dropdown :trigger="['click']" class="dropdown" v-else>
         <a class="ant-dropdown-link" href="#">
@@ -45,7 +45,7 @@
           </a-menu-item>
         </a-menu>
       </a-dropdown>
-    </div>-->
+    </div>
   </div>
 </template>
 
@@ -59,10 +59,10 @@ export default {
   },
   methods: {
     createIssue() {
-      this.$router.push("about");
+      this.$router.push("/about");
     },
     homepoint() {
-      this.$router.push("issues");
+      this.$router.push("/issues");
     }
   },
   computed: {
@@ -84,6 +84,7 @@ export default {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  z-index: 999;
   // z-index: 800;
   // position: fixed;
   border-bottom: 2px solid #efefef;

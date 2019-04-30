@@ -28,10 +28,11 @@ export default new Router({
 
     },
     {
-      path: '/detail',
-      name: 'detail',
+      path: '/detail/:id',
+      // name: 'detail',
       component: () => import(/* webpackChunkName: "about" */ '../views/Detail.vue'),
 
     },
+    /* 1 */
   ],
 });
