@@ -146,11 +146,12 @@ export default {
 }
 .comment {
   margin-bottom: 10px;
+  border: 1px solid white;
   .comment-header {
     background-color: rgb(244, 249, 241);
   }
 }
-// .comment:hover {
-//   border: 1px solid black;
-// }
+.comment:hover {
+  border: 1px solid black;
+}
 </style>
